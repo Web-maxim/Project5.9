@@ -6,16 +6,16 @@
 
 using namespace std;
 
-int main() {
+int main() {setlocale(LC_ALL, "rus");
     Snack* bounty = new Snack("Bounty");
     Snack* snickers = new Snack("Snickers");
-    SnackSlot* slot = new SnackSlot(10);  /*количество батончиков, которые помещаются в слот*/
-    slot->addSnack(bounty);  //Добавляем батончик в слот
+    SnackSlot* slot = new SnackSlot(10);  /*ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЎГ ГІГ®Г­Г·ГЁГЄГ®Гў, ГЄГ®ГІГ®Г°Г»ГҐ ГЇГ®Г¬ГҐГ№Г ГѕГІГ±Гї Гў Г±Г«Г®ГІ*/
+    slot->addSnack(bounty);  //Г„Г®ГЎГ ГўГ«ГїГҐГ¬ ГЎГ ГІГ®Г­Г·ГЁГЄ Гў Г±Г«Г®ГІ
     slot->addSnack(snickers);
-    VendingMachine* machine = new VendingMachine(5);  /*Количество слотов для снеков*/
-    machine->addSlot(slot);  // Помещаем слот обратно в аппарат
+    VendingMachine* machine = new VendingMachine(5);  /*ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±Г«Г®ГІГ®Гў Г¤Г«Гї Г±Г­ГҐГЄГ®Гў*/
+    machine->addSlot(slot);  // ГЏГ®Г¬ГҐГ№Г ГҐГ¬ Г±Г«Г®ГІ Г®ГЎГ°Г ГІГ­Г® Гў Г ГЇГЇГ Г°Г ГІ
 
-    cout << machine->getEmptySlotsCount() << endl; // Должно вывести 0, т.к. слот не пустой
+    cout << machine->getEmptySlotsCount() << endl; // Г„Г®Г«Г¦Г­Г® ГўГ»ГўГҐГ±ГІГЁ 0, ГІ.ГЄ. Г±Г«Г®ГІ Г­ГҐ ГЇГіГ±ГІГ®Г©
 
     delete machine;
     delete slot;
